@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Open Chat GPT AI</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css">
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const chatMessages = document.getElementById("chat-messages");
+    const messageInput = document.getElementById("message-input");
+    const sendButton = document.getElementById("send-button");
+
+    sendButton.addEventListener("click", function() {
+        const userMessage = messageInput.value;
+        displayUserMessage(userMessage);
+        getAIResponse(userMessage);
+    });
+
+    function displayUserMessage(message) {
+        // Add the user's message to the chat interface
+        // You can format and style the message as needed
+    }
+
+    function displayAIResponse(message) {
+        // Add the AI's response to the chat interface
+        // You can format and style the message as needed
+    }
+
+    function getAIResponse(userMessage) {
+        // Use an API or library to send the user's message to a GPT model
+        // Receive the AI's response and call displayAIResponse()
+    }
+});
+</script>
+
+   <style>
+#chat-container {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#chat-messages {
+    height: 300px;
+    overflow-y: scroll;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#user-input {
+    display: flex;
+}
+
+#message-input {
+    flex: 1;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#send-button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+</style>
+</head>
+<body>
+    <div id="chat-container">
+        <div id="chat-messages"></div>
+        <div id="user-input">
+            <input type="text" id="message-input" placeholder="Type your message...">
+            <button id="send-button">Send</button>
+        </div>
+    </div>
+</body>
+</html>

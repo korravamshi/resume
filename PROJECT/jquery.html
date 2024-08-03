@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<script src="../node_modules/jquery/dist/jquery.js"></script>
+<script>
+$(function(){
+$("button").click(function(){
+$.ajax({
+method: "get",
+url :"../data/product.json",
+success: function(data){
+$.each(data,(property,value)=>{
+$(`<li>${value.Name}</li>`).appendTo("ol");
+})
+}
+})
+})
+})
+.ajaxStart(()=>{
+alert(`Your Request for Products data Started`);
+})
+.ajaxSuccess(()=>{
+alert(`Your Request Processed Successfully`);
+})
+.ajaxComplete(()=>{
+alert(`Your Request for products Completed`);
+})
+.ajaxStop(()=>{
+alert(`Your request has Stopped`);
+})
+.ajaxError(()=>{
+alert(`Unable to process Your Request`);
+})
+</script>
+</head>
+<body>
+<button>Load</button>
+<br><br>
+<ol>
+</ol>
+</body>
+</html>
