@@ -16,22 +16,22 @@ body {
 }
 
 header {
-    background-color: #004d40; /* Deep teal background for header */
-    color: #ffffff; /* White text for header */
+    background-color: #004d40; 
+    color: #ffffff; 
     padding: 20px;
-    border-bottom: 4px solid #ffd54f; /* Golden yellow for header border */
-    display: flex; /* Flexbox for positioning */
+    border-bottom: 4px solid #ffd54f; 
+    display: flex; 
     align-items: center;
-    gap: 20px; /* Space between elements */
+    gap: 20px; 
 }
 
 .profile-img {
-    width: 150px; /* Increased size for better visibility */
+    width: 150px; 
     height: 150px;
-    border-radius: 50%; /* Circular shape */
-    border: 6px solid #00796b; /* Teal border with increased width */
-    object-fit: cover; /* Cover the image area */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+    border-radius: 50%; 
+    border: 6px solid #00796b; 
+    object-fit: cover; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
 }
 
 .contact-info {
@@ -108,14 +108,44 @@ ul {
 
 .date {
     font-weight: normal;
-    color: #666666; /* Dark grey for dates */
+    color: #666666; 
 }
+
+
+
+.open-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .open-button:hover {
+            background-color: #0056b3;
+        }
+
 
 
 
 </style>
 </head>
+
 <body>
+
+
+    <button class="open-button" onclick="openCertificate()">Open Certificate</button>
+
+    <script>
+        function openCertificate() {
+            window.open('C:\Users\korra\OneDrive\Documents\GitHub\resume\public\images\bgpic.avif', '_blank');
+        }
+    </script>
+
+
+
     <header>
         <img src="public/images/pic.jpg" alt="Korra Vamshi" class="profile-img">
         <div class="contact-info">
