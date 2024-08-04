@@ -112,13 +112,12 @@ ul {
 }
 
 
-
 .open-button {
-            display: inline-block;
+            display:inline-block;
             padding: 10px 20px;
             font-size: 16px;
             color: #fff;
-            background-color: #007BFF;
+            background-color:#007BFF;
             border: none;
             border-radius: 5px;
             cursor: pointer;
@@ -126,6 +125,21 @@ ul {
         .open-button:hover {
             background-color: #0056b3;
         }
+        #image-container {
+            display: none; 
+            text-align: center;
+            margin-top: 20px;
+        }
+        img {
+            max-width: 40%; 
+            height: 40%;
+            border: 2px solid #007BFF; 
+            border-radius: 5px; 
+        }
+
+
+
+
 
 
 
@@ -134,15 +148,20 @@ ul {
 </head>
 
 <body>
+   
 
-
-    <button class="open-button" onclick="openCertificate()">Open Certificate</button>
+    <button class="open-button" onclick="showImage()">Certificates</button>
+    <div id="image-container">
+        <img src="public/images/javacertificate.png" alt="Description of the image">
+    </div>
 
     <script>
-        function openCertificate() {
-            window.open('C:\Users\korra\OneDrive\Documents\GitHub\resume\public\images\bgpic.avif', '_blank');
+        function showImage() {
+            document.getElementById('image-container').style.display = 'block';
         }
     </script>
+
+
 
 
 
